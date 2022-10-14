@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../bootstrap/js/bootstrap.min.js">
+	<link rel="stylesheet" href="../css/carCalc.css">
+	<title>Document</title>
+</head>
+<body >
+	<div class="car">
+		<div class="container">
+
+			<h1 class="title">Рассчитайте стоимость автомобиля в лизинг</h1>
+			<div class="d-flex justify-content-between car__input">
+				<div class="one__pay d-block">
+					<label for="price" class="d-block title__pay">Стоимость автомобиля</label>
+					<input type="number" class="pay__car" min="0" max="9000000" placeholder="1 000 000" id="price" onchange="sumCar()"><span class="icons" >₽</span>
+					
+				</div>
+				<div class="one__pay d-block">
+					<label for="price" class="d-block title__pay">Первоначальный взнос</label>
+					<input type="number" class="pay__car"  min="0" max="1000000" placeholder="100 000" id='fee'><span class="icons" >13%</span>
+			
+				</div>
+				<div class="one__pay d-block">
+					<label for="price" class="d-block title__pay">Срок лизинга</label>
+					<input type="number" class="pay__car" placeholder="20" id='limit' onchange="monthPrice()"><span class="icons">мес.</span>
+
+				</div>
+				<div class="result">
+					<label for="result" class="title__pay">
+						Сумма договора лизинга
+					</label>
+					<h3 class="result__pay" id="sum">
+					</h3>
+				</div>
+				<div class="result" >
+					<label for="result" class="title__pay" >
+						Ежемесячный платеж от
+					</label>
+					<h3 class="result__pay" id="month" >
+					</h3>
+				</div>
+				<button type="button"class="btn btn__pay" id="btn">
+					Оставить заявку
+				</button>
+			</div>
+
+			<div class="modal fade" id="exampleModal">
+  			<div class="modal-dialog">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <h1 class="modal-title" id="exampleModalLabel">Заявка на лизинг</h1>
+			        <button type="button" class="btn-close" id="btnClose"></button>
+			      </div>
+			      <div class="modal-body">
+			        Ваш запрос на лизинг прошел успешно!
+			        <span class="happy">Поздравляем!!!</span>
+			      </div>
+			      
+			    </div>
+			  </div>
+			</div>
+		</div>
+	</div>
+
+
+	<script src="js/scriptCar.js"></script>
+</body>
+</html>
